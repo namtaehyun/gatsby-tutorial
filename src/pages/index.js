@@ -1,4 +1,5 @@
 import * as React from "react"
+import { StaticImage } from 'gatsby-plugin-image'
 
 // styles
 const pageStyles = {
@@ -145,6 +146,11 @@ const IndexPage = () => {
           😎
         </span>
       </p>
+      
+      <StaticImage
+        alt="선비"
+        src="../images/sunbi.jpg"
+      />
       <ul style={listStyles}>
         <li style={docLinkStyle}>
           <a
