@@ -1,5 +1,6 @@
 import * as React from "react"
 import { StaticImage } from 'gatsby-plugin-image'
+import { useStaticQuery, graphql } from 'gatsby'
 
 // styles
 const pageStyles = {
@@ -128,6 +129,18 @@ const links = [
 
 // markup
 const IndexPage = () => {
+  const data = useStaticQuery(graphql`
+    query{
+      site {
+        siteMetadata {
+          title
+        }
+      }
+    }
+  `)
+  
+  const { title } = data.site.siteMetadata;
+
   return (
     <main style={pageStyles}>
       <title>Gatsby Tutorial!!</title>
@@ -146,6 +159,7 @@ const IndexPage = () => {
           😎
         </span>
       </p>
+      <header>{title}</header>
       
       <StaticImage
         alt="선비"
