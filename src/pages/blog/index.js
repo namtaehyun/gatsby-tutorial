@@ -8,8 +8,6 @@ const BlogPage = ({ data }) => {
       {data.allMdx.nodes.map((node) => {
         const { title, date } = node.frontmatter;
 
-        console.log(node);
-
         return (
           <article key={node.id}>
             <h2>

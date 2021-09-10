@@ -27,5 +27,5 @@ export const query = graphql`
     }
   }
 `
-// highlight-end
+
 export default BlogPost
